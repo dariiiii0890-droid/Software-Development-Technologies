@@ -18,7 +18,11 @@ int main() {
     std::cout << "Lab1: determinant of " << data->n << "x" << data->n << " matrix\n";
 
     // >>> ALGORITHMS CALL ZONE (Student A / Student B) <<<
-    // TODO: call algorithms and print results
+    auto resultA = calculateA(data);
+    auto [detA, opsA] = *resultA;
+    std::cout << "[Student A] Laplace expansion\n"
+        << "  determinant = " << detA << "\n"
+        << "  operations  = " << opsA << "\n";
     // >>> END OF ZONE <<<
 
     return 0;
