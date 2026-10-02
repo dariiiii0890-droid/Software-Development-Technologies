@@ -6,6 +6,9 @@
 #include "shared_types.h"
 #include "student_a.h"
 
+std::unique_ptr<Result> calculateB(
+    std::shared_ptr<const InputData> data);
+
 int main() {
     InputData input{};
     input.matrix = {
@@ -21,7 +24,14 @@ int main() {
         << data->n << "x" << data->n << " matrix\n";
 
     // >>> ALGORITHMS CALL ZONE (Student A / Student B) <<<
-    // TODO: call algorithms and print results
+
+    auto resultB = calculateB(data);
+    auto [valueB, operationsB] = *resultB;
+
+    std::cout << "Student B - Triangular method\n";
+    std::cout << "Determinant: " << valueB << '\n';
+    std::cout << "Operations: " << operationsB << '\n';
+
     // >>> END OF ZONE <<<
 
     return 0;
