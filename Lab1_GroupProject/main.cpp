@@ -25,6 +25,12 @@ int main() {
 
     // >>> ALGORITHMS CALL ZONE (Student A / Student B) <<<
 
+    auto resultA = calculateA(data);
+    auto [detA, opsA] = *resultA;
+    std::cout << "[Student A] Laplace expansion\n"
+        << "  determinant = " << detA << "\n"
+        << "  operations  = " << opsA << "\n";
+
     auto resultB = calculateB(data);
     auto [valueB, operationsB] = *resultB;
 
