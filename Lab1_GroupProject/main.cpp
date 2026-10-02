@@ -7,15 +7,18 @@
 #include "student_a.h"
 
 int main() {
-    InputData input{
-        {{2.0, -1.0, 3.0},
-         {0.0,  4.0, 5.0},
-         {1.0,  2.0, -2.0}},
-        3
+    InputData input{};
+    input.matrix = {
+        {2.0, -1.0, 3.0},
+        {0.0, 4.0, 5.0},
+        {1.0, 2.0, -2.0}
     };
+    input.n = 3;
+
     auto data = std::make_shared<const InputData>(std::move(input));
 
-    std::cout << "Lab1: determinant of " << data->n << "x" << data->n << " matrix\n";
+    std::cout << "Lab1: determinant of "
+        << data->n << "x" << data->n << " matrix\n";
 
     // >>> ALGORITHMS CALL ZONE (Student A / Student B) <<<
     // TODO: call algorithms and print results
