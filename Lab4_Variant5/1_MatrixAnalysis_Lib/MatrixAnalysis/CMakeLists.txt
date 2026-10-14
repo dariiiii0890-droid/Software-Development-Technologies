@@ -1,0 +1,5 @@
+add_library(MatrixAnalysis STATIC src/MatrixAnalysis.cpp)
+
+target_include_directories(MatrixAnalysis PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_compile_features(MatrixAnalysis PUBLIC cxx_std_20)
+target_compile_definitions(MatrixAnalysis PUBLIC MATRIX_STATIC)
