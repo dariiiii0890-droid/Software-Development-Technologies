@@ -1,0 +1,7 @@
+{
+    "name": "lab18-optimization",
+    "version-string": "1.0.0",
+    "dependencies": [
+        "gtest"
+    ]
+}
